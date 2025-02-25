@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, TouchableOpacity, SafeAreaView} from 'react-native';
 
-export default function Home() {
+export default function Home(props) {
         
     return(
         <SafeAreaView>
@@ -8,12 +8,12 @@ export default function Home() {
                 <Text style={styles.titulo}>Mundo do progamador</Text>
                 <Text style={styles.subTitulo}>Dicas para o mercado de trabalho</Text>
             </View>
-        <TouchableOpacity style={styles.btn}>
+        <TouchableOpacity style={styles.btn} onPress={()=>{props.navigation.navigate('Dica1')}}>
             <View>
                 <Text style={styles.text}>Dica 1- Repertório de Conhecimento sobre o assunto </Text>
             </View>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.btn}>
+        <TouchableOpacity style={styles.btn} onPress={()=>{props.navigation.navigate('Dica2')}}>
             <View>
                 <Text style={styles.text}>Dica 2- Conhecimentos da Empresa</Text>
             </View>
@@ -38,26 +38,28 @@ const styles = StyleSheet.create({
     },
     titulo: {
         fontSize: 35,
-        color:'#fff',
+        fontWeight: 'bold',
+        color:'#544AEF',
         bottom:260,
         textAlign: 'center',
         marginBottom: -50,
       },
       subTitulo: {
         fontSize: 20,
+        fontWeight: 'bold',
         color:'#fff',
         bottom:200,
         textAlign: 'center'
       },
       btn:{
-        backgroundColor:'#46A6F0',
+        backgroundColor:'rgb(19, 18, 18)',
         marginVertical: '10',
-        borderWidth: 2,
+        borderWidth: 3,
         borderTopLeftRadius: 12,
         borderTopRightRadius: 12,
         borderBottomLeftRadius: 12,
         borderBottomRightRadius: 12,
-        borderColor: '#4670F0'
+        borderColor: '#544AEF'
       }
         
   });

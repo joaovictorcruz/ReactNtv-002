@@ -1,10 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import Dica01 from './components/dica01';
+import RotasBotao from './components/rotasBotao';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Dica01/>
+      <RotasBotao/>
       <StatusBar style="auto" />
     </View>
   );
@@ -18,4 +18,3 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   }
 });
-a

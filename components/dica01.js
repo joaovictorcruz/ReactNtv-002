@@ -1,4 +1,4 @@
-import { StyleSheet, ImageBackground, Text, View, TouchableOpacity, SafeAreaView} from 'react-native';
+import { StyleSheet, Image, Text, View, TouchableOpacity, SafeAreaView} from 'react-native';
 
 export default function Dica1(){
     return(
@@ -6,7 +6,7 @@ export default function Dica1(){
             <Text style={styles.title}>Dica 01</Text>
                 <Text style={styles.subTitle}>Repertório de Conhecimento sobre o assunto</Text>
                 <Text style={styles.text}>Para melhorar seu repertório de conhecimento em programação, estude profundamente as linguagens e frameworks que usa, participe de comunidades, resolva problemas reais, documente o que aprendeu e se mantenha sempre atualizado. Isso vai ajudar a aprimorar suas habilidades e a criar soluções mais eficazes.</Text> 
-
+                <Image  style={styles.image} source={require('../assets/mask.jpg')}/>
         </SafeAreaView>
     );
 }
@@ -43,6 +43,12 @@ const styles = StyleSheet.create({
       width: '300',
       height: '200',
       alignSelf:"center",
-      marginVertical: "15"
+      marginVertical: "15",
+      borderWidth: 3,
+        borderTopLeftRadius: 12,
+        borderTopRightRadius: 12,
+        borderBottomLeftRadius: 12,
+        borderBottomRightRadius: 12,
+        borderColor: '#544AEF'
     }
   });
